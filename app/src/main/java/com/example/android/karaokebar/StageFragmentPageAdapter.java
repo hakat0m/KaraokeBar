@@ -16,16 +16,15 @@ public class StageFragmentPageAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        if (position == 0) {
-            return new NowOnStageFragment();
-
-        } else if (position == 1) {
-            return new ChooseSongFragment();
-
-        } else if (position == 2) {
-            return new ProfilesFragment();
-
-        } else return new NowOnStageFragment();
+        switch (position) {
+            case 0:
+                return new NowOnStageFragment();
+            case 1:
+                return new ChooseSongFragment();
+            case 2:
+                return new ProfilesFragment();
+        }
+        return null;
     }
 
     @Override
