@@ -1,3 +1,8 @@
 <resources>
 	<string name="app_name">Karaoke Bar</string>
+
+	//Tab text will be displayed in top tabbed menu title
+	<string name="tab_now_playing">Now playing</string>
+	<string name="tab_choose_song">Choose song</string>
+	<string name="tab_karaoke_stars">Karaoke stars</string>
 </resources>
