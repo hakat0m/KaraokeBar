@@ -15,20 +15,20 @@ public class MainActivity extends AppCompatActivity {
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
-        // Find the login button
+        // Find the login button. Login is not yet ready.
+        // Click on login button redirects user to TabActivity
         Button loginButton = (Button) findViewById(R.id.buttonLogin);
+
         loginButton.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
-                   //Create new intent to open {@link TabbedActivity}
-                   Intent stageIntent = new Intent(MainActivity.this, TabbedActivity.class);
+                   //Create new intent to open {@link TabsActivity}
+                   Intent stageIntent = new Intent(MainActivity.this, TabsActivity.class);
 
                    //Start the new activity
                    startActivity(stageIntent);
                }
            }
         );
-
-
     }
 }

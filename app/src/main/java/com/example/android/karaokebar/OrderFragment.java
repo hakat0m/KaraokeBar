@@ -11,10 +11,10 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SongsFragment extends Fragment {
+public class OrderFragment extends Fragment {
 
 
-    public SongsFragment() {
+    public OrderFragment() {
         // Required empty public constructor
     }
 
@@ -23,7 +23,7 @@ public class SongsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_songs, container, false);
+        return inflater.inflate(R.layout.fragment_order, container, false);
     }
 
 }
