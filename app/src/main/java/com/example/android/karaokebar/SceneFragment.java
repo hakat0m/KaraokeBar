@@ -6,6 +6,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 
 /**
@@ -22,8 +25,28 @@ public class SceneFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        ArrayList<Song> songList = new ArrayList<Song>();
+
+        songList.add(new Song("singer1", "artist1", "title1"));
+        songList.add(new Song("singer2", "artist2", "title2"));
+        songList.add(new Song("singer3", "artist3", "title3"));
+
+        View rootView = inflater.inflate(R.layout.fragment_scene, container, false);
+
+        // Create an {@link SongListAdapter}, whose data source is a list of
+        // {@link Song}s.
+//        SongListAdapter itemsAdapter = new SongListAdapter(getActivity(), songList);
+//        ListView listView = (ListView) rootView.findViewById(R.id.list_view_scene);
+//        listView.setAdapter(itemsAdapter);
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_scene, container, false);
+        return rootView;
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
     }
 
 }
