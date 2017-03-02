@@ -26,6 +26,8 @@ public class SceneFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        //Create and populate list of song that will be displayed
+        //in On scene tab.
         ArrayList<Song> songList = new ArrayList<Song>();
 
         songList.add(new Song("singer1", "artist1", "title1"));
@@ -36,9 +38,9 @@ public class SceneFragment extends Fragment {
 
         // Create an {@link SongListAdapter}, whose data source is a list of
         // {@link Song}s.
-//        SongListAdapter itemsAdapter = new SongListAdapter(getActivity(), songList);
-//        ListView listView = (ListView) rootView.findViewById(R.id.list_view_scene);
-//        listView.setAdapter(itemsAdapter);
+        SongListAdapter itemsAdapter = new SongListAdapter(getActivity(), songList);
+        ListView listView = (ListView) rootView.findViewById(R.id.list_view_scene);
+        listView.setAdapter(itemsAdapter);
 
         // Inflate the layout for this fragment
         return rootView;
