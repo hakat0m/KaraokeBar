@@ -7,7 +7,8 @@ package com.example.android.karaokebar;
 public class Song {
     private int placeInQueue;
     private String title;
-    private String artistName;
+    private String artist;
+    private String singer;
 
 /*
 * Creates new song object
@@ -17,9 +18,10 @@ public class Song {
 *
 * */
 
-    public Song(String pArtistName, String pTitle) {
-        this.artistName = pArtistName;
+    public Song(String pSinger, String pArtist, String pTitle) {
+        this.artist = pArtist;
         this.title = pTitle;
+        this.singer = pSinger;
     }
 
 
@@ -31,12 +33,20 @@ public class Song {
         title = pTitle;
     }
 
-    public String getArtistName() {
-        return artistName;
+    public String getArtist() {
+        return artist;
     }
 
-    public void setArtistName(String pArtistName) {
-        artistName = pArtistName;
+    public void setArtist(String pArtist) {
+        artist = pArtist;
+    }
+
+    public String getSinger() {
+        return singer;
+    }
+
+    public void setSinger(String pSinger) {
+        singer = pSinger;
     }
 
     @Override
@@ -44,7 +54,7 @@ public class Song {
         return "Song{" +
                 "placeInQueue=" + placeInQueue +
                 ", title='" + title + '\'' +
-                ", artistName='" + artistName + '\'' +
+                ", artist='" + artist + '\'' +
                 '}';
     }
 }
