@@ -2,12 +2,11 @@
 			 xmlns:tools="http://schemas.android.com/tools"
 			 android:layout_width="match_parent"
 			 android:layout_height="match_parent"
-			 tools:context="com.example.android.karaokebar.NowOnStageFragment">
+			 tools:context="com.example.android.karaokebar.SceneFragment">
 
-	<!-- TODO: Update blank fragment layout -->
 	<TextView
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		android:text="@string/tab_now_playing"/>
+		android:text="@string/tab_on_scene"/>
 
 </FrameLayout>

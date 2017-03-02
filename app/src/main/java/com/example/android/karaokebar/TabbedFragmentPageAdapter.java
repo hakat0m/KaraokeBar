@@ -8,9 +8,9 @@ import android.support.v4.app.FragmentPagerAdapter;
  * Provides the appropriate {@link Fragment} for a view pager.
  */
 
-public class StageFragmentPageAdapter extends FragmentPagerAdapter {
+public class TabbedFragmentPageAdapter extends FragmentPagerAdapter {
 
-    public StageFragmentPageAdapter(FragmentManager fm) {
+    public TabbedFragmentPageAdapter(FragmentManager fm) {
         super(fm);
     }
 
@@ -18,9 +18,9 @@ public class StageFragmentPageAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new NowOnStageFragment();
+                return new SceneFragment();
             case 1:
-                return new ChooseSongFragment();
+                return new SongsFragment();
             case 2:
                 return new ProfilesFragment();
         }

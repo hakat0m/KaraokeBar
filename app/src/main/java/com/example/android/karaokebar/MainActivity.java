@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
-                   //Create new intent to open {@link StageActivity}
-                   Intent stageIntent = new Intent(MainActivity.this, StageActivity.class);
+                   //Create new intent to open {@link TabbedActivity}
+                   Intent stageIntent = new Intent(MainActivity.this, TabbedActivity.class);
 
                    //Start the new activity
                    startActivity(stageIntent);

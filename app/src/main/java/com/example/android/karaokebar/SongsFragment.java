@@ -11,10 +11,10 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class NowOnStageFragment extends Fragment {
+public class SongsFragment extends Fragment {
 
 
-    public NowOnStageFragment() {
+    public SongsFragment() {
         // Required empty public constructor
     }
 
@@ -23,7 +23,7 @@ public class NowOnStageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_now_on_stage, container, false);
+        return inflater.inflate(R.layout.fragment_songs, container, false);
     }
 
 }
