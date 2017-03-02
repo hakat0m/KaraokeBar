@@ -15,7 +15,6 @@ currently performed songs and waiting artists.
 	<TextView
 		android:id="@+id/list_item_scene_song_name"
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="test"/>
+		android:layout_height="wrap_content"/>
 
 </LinearLayout>

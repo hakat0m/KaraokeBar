@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -41,6 +42,10 @@ public class SceneFragment extends Fragment {
         SongListAdapter itemsAdapter = new SongListAdapter(getActivity(), songList);
         ListView listView = (ListView) rootView.findViewById(R.id.list_view_scene);
         listView.setAdapter(itemsAdapter);
+
+        // Remove focus on search bar
+//        EditText editText = (EditText) rootView.findViewById(R.id.editText);
+//        editText.clearFocus();
 
         // Inflate the layout for this fragment
         return rootView;
