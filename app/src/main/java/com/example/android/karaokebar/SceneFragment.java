@@ -43,10 +43,6 @@ public class SceneFragment extends Fragment {
         ListView listView = (ListView) rootView.findViewById(R.id.list_view_scene);
         listView.setAdapter(itemsAdapter);
 
-        // Remove focus on search bar
-//        EditText editText = (EditText) rootView.findViewById(R.id.editText);
-//        editText.clearFocus();
-
         // Inflate the layout for this fragment
         return rootView;
     }
