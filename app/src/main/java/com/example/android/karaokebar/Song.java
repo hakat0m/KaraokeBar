@@ -9,6 +9,7 @@ public class Song {
     private String title;
     private String artist;
     private String singer;
+    private int imageResourceId;
 
 /*
 * Creates new song object
@@ -18,10 +19,11 @@ public class Song {
 *
 * */
 
-    public Song(String pSinger, String pArtist, String pTitle) {
+    public Song(String pSinger, String pArtist, String pTitle, int pImageResourceId) {
         this.artist = pArtist;
         this.title = pTitle;
         this.singer = pSinger;
+        this.imageResourceId = pImageResourceId;
     }
 
 
@@ -47,6 +49,14 @@ public class Song {
 
     public void setSinger(String pSinger) {
         singer = pSinger;
+    }
+
+    public int getImageResourceId() {
+        return imageResourceId;
+    }
+
+    public void setImageResourceId(int pImageResourceId) {
+        imageResourceId = pImageResourceId;
     }
 
     @Override

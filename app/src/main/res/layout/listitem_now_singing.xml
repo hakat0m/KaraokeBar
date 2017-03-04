@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="match_parent"
+			  android:layout_height="wrap_content"
+			  android:orientation="vertical">
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:text="@string/now_singing"
+		android:textColor="@color/colorPrimaryLightText"
+		android:background="@color/colorPrimaryDark"
+		android:gravity="center"
+		android:textSize="16dp"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/colorPrimaryDark">
+		<ImageView
+			android:src="@drawable/background_2"
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:layout_gravity="center"
+			android:padding="16dp"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingBottom="32dp"
+			android:orientation="vertical">
+
+			<ImageView
+				android:id="@+id/list_item_scene_singer_photo"
+				style="@style/ListImage"
+				android:src="@drawable/abby"
+				android:layout_height="180dp"
+				android:layout_width="180dp"
+				android:layout_gravity="center"
+				android:padding="16dp"/>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:text="Janet"
+				android:textColor="@color/colorPrimaryLightText"
+				android:gravity="center"
+				android:textSize="36dp"/>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:text="This is what you came for - Rihanna"
+				android:textColor="@color/colorPrimaryLight"
+				android:gravity="center"
+				android:textSize="16dp"/>
+
+		</LinearLayout>
+
+	</RelativeLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="60dp">
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:text="Comming up next..."
+			android:textColor="@color/colorSecondaryText"
+			android:gravity="center"
+			android:textSize="16dp"/>
+	</LinearLayout>
+
+</LinearLayout>

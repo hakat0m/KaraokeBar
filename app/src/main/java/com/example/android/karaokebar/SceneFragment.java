@@ -31,9 +31,14 @@ public class SceneFragment extends Fragment {
         //in On scene tab.
         ArrayList<Song> songList = new ArrayList<Song>();
 
-        songList.add(new Song("singer1", "artist1", "title1"));
-        songList.add(new Song("singer2", "artist2", "title2"));
-        songList.add(new Song("singer3", "artist3", "title3"));
+        songList.add(new Song("Janet", "Rihanna", "\"This Is What You Came For\"", R.drawable.abby));
+        songList.add(new Song("Mark", "Twenty one pilots", "\"Heathens\"", R.drawable.mark));
+        songList.add(new Song("Annie", "The Chainsmokers feat. Halsey", "\"Closer\"" , R.drawable.annie));
+        songList.add(new Song("Ken", "Rihanna", "\"Closer\"" , R.drawable.ken));
+        songList.add(new Song("Abby", "Rihanna", "\"This Is What You Came For\"", R.drawable.abby));
+        songList.add(new Song("Mark", "Twenty one pilots", "\"Heathens\"", R.drawable.mark));
+        songList.add(new Song("Annie", "The Chainsmokers feat. Halsey", "\"Closer\"" , R.drawable.annie));
+        songList.add(new Song("Ken", "Rihanna", "\"Closer\"" , R.drawable.ken));
 
         View rootView = inflater.inflate(R.layout.fragment_scene, container, false);
 

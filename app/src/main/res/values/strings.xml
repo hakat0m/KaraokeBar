@@ -3,9 +3,11 @@
 
 	//Tab text will be displayed in top tabbed menu title
 	<string name="tab_on_scene">On Scene</string>
+	<string name="now_singing">Now Singing</string>
 	<string name="tab_choose_song">Choose song</string>
 	<string name="tab_karaoke_stars">Karaoke stars</string>
 	<string name="title_activity_tabbed">Karaoke Bar</string>
 	<string name="action_settings">Settings</string>
 	<string name="section_format">Hello World from section: %1$d</string>
+	<string name="em_dash"> — </string>
 </resources>
