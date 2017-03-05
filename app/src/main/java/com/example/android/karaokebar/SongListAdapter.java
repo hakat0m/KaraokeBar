@@ -1,6 +1,7 @@
 package com.example.android.karaokebar;
 
 import android.app.Activity;
+import android.support.design.widget.Snackbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +37,15 @@ public class SongListAdapter extends ArrayAdapter<Song> {
             if (listItemView == null) {
                 listItemView = LayoutInflater.from(getContext()).inflate(
                         R.layout.listitem_now_singing, parent, false);
+
+                View fab = listItemView.findViewById(R.id.pink_icon);
+                fab.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    }
+                });
             }
         } else {
             if (listItemView == null) {
