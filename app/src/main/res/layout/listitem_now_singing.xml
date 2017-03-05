@@ -14,9 +14,11 @@
 		android:textSize="16dp"/>
 
 	<RelativeLayout
+		android:id="@+id/now_singing_container"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:background="@color/colorPrimaryDark">
+
 		<ImageView
 			android:src="@drawable/background_2"
 			android:layout_height="wrap_content"
@@ -54,6 +56,8 @@
 				android:textSize="16dp"/>
 
 		</LinearLayout>
+
+		<include layout="@layout/button_like"/>
 
 	</RelativeLayout>
 
