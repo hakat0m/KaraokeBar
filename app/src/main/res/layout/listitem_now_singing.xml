@@ -36,8 +36,8 @@
 				android:id="@+id/list_item_scene_singer_photo"
 				style="@style/ListImage"
 				android:src="@drawable/abby"
-				android:layout_height="180dp"
-				android:layout_width="180dp"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
 				android:layout_gravity="center"
 				android:padding="16dp"/>
 			<TextView
