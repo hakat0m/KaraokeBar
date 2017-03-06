@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -51,10 +53,10 @@ public class OrderFragment extends Fragment {
             R.drawable.proclaimers,
     };
 
-    private ArrayList<SongOrder> prepareData(){
+    private ArrayList<SongOrder> prepareData() {
 
         ArrayList<SongOrder> theimage = new ArrayList<>();
-        for(int i = 0; i< image_titles.length; i++){
+        for (int i = 0; i < image_titles.length; i++) {
             SongOrder createList = new SongOrder();
             createList.setImage_title(image_titles[i]);
             createList.setImage_ID(image_ids[i]);
@@ -78,11 +80,24 @@ public class OrderFragment extends Fragment {
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.imagegallery);
         recyclerView.setHasFixedSize(true);
 
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getActivity().getApplicationContext(),2);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getActivity().getApplicationContext(), 2);
         recyclerView.setLayoutManager(layoutManager);
         ArrayList<SongOrder> createLists = prepareData();
         SongOrderAdapter adapter = new SongOrderAdapter(getActivity().getApplicationContext(), createLists);
         recyclerView.setAdapter(adapter);
+
+        // Set on click event handler for Order list items
+        // When clicks on the song to go to form activity
+        // RecyclerView doesn't have own setOnClickListener
+        // but there is helper class ItemClickSupport
+        RecyclerView orderRecyclerView = (RecyclerView) rootView.findViewById(R.id.imagegallery);
+        ItemClickSupport.addTo(orderRecyclerView)
+                .setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
+                    @Override
+                    public void onItemClicked(RecyclerView recyclerView, int position, View v) {
+                        Log.i("Order track","clicked");
+                    }
+                });
 
         return rootView;
     }
