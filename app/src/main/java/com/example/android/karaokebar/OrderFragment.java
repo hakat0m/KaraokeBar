@@ -9,7 +9,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -53,11 +52,11 @@ public class OrderFragment extends Fragment {
             R.drawable.proclaimers,
     };
 
-    private ArrayList<SongOrder> prepareData() {
+    private ArrayList<TrackOrder> prepareData() {
 
-        ArrayList<SongOrder> theimage = new ArrayList<>();
+        ArrayList<TrackOrder> theimage = new ArrayList<>();
         for (int i = 0; i < image_titles.length; i++) {
-            SongOrder createList = new SongOrder();
+            TrackOrder createList = new TrackOrder();
             createList.setImage_title(image_titles[i]);
             createList.setImage_ID(image_ids[i]);
             theimage.add(createList);
@@ -82,8 +81,8 @@ public class OrderFragment extends Fragment {
 
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getActivity().getApplicationContext(), 2);
         recyclerView.setLayoutManager(layoutManager);
-        ArrayList<SongOrder> createLists = prepareData();
-        SongOrderAdapter adapter = new SongOrderAdapter(getActivity().getApplicationContext(), createLists);
+        ArrayList<TrackOrder> createLists = prepareData();
+        TrackOrderAdapter adapter = new TrackOrderAdapter(getActivity().getApplicationContext(), createLists);
         recyclerView.setAdapter(adapter);
 
         // Set on click event handler for Order list items

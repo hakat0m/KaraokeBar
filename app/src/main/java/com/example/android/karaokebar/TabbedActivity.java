@@ -110,9 +110,9 @@ public class TabbedActivity extends AppCompatActivity {
                 case 0:
                     return "Now on stage";
                 case 1:
-                    return "Order a Song";
+                    return "Order a song";
                 case 2:
-                    return "Karaoke Stars";
+                    return "Karaoke stars";
             }
             return null;
         }

@@ -4,7 +4,7 @@ package com.example.android.karaokebar;
  * Created by Aga on 3/2/2017.
  */
 
-public class Song {
+public class Performance {
     private int placeInQueue;
     private String title;
     private String artist;
@@ -19,7 +19,7 @@ public class Song {
 *
 * */
 
-    public Song(String pSinger, String pArtist, String pTitle, int pImageResourceId) {
+    public Performance(String pSinger, String pArtist, String pTitle, int pImageResourceId) {
         this.artist = pArtist;
         this.title = pTitle;
         this.singer = pSinger;
@@ -61,7 +61,7 @@ public class Song {
 
     @Override
     public String toString() {
-        return "Song{" +
+        return "Performance{" +
                 "placeInQueue=" + placeInQueue +
                 ", title='" + title + '\'' +
                 ", artist='" + artist + '\'' +

@@ -3,7 +3,7 @@ package com.example.android.karaokebar;
 /**
  * Created by Aga on 3/5/2017.
  */
-public class SongOrder {
+public class TrackOrder {
 
     private String image_title;
     private Integer image_id;

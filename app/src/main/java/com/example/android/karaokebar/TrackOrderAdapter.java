@@ -13,23 +13,23 @@ import java.util.ArrayList;
  * Created by Aga on 3/5/2017.
  */
 
-public class SongOrderAdapter extends RecyclerView.Adapter<SongOrderAdapter.ViewHolder> {
-    private ArrayList<SongOrder> galleryList;
+public class TrackOrderAdapter extends RecyclerView.Adapter<TrackOrderAdapter.ViewHolder> {
+    private ArrayList<TrackOrder> galleryList;
     private Context context;
 
-    public SongOrderAdapter(Context context, ArrayList<SongOrder> galleryList) {
+    public TrackOrderAdapter(Context context, ArrayList<TrackOrder> galleryList) {
         this.galleryList = galleryList;
         this.context = context;
     }
 
     @Override
-    public SongOrderAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+    public TrackOrderAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.cell_layout, viewGroup, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(SongOrderAdapter.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(TrackOrderAdapter.ViewHolder viewHolder, int i) {
         viewHolder.title.setText(galleryList.get(i).getImage_title());
         viewHolder.img.setScaleType(ImageView.ScaleType.CENTER_CROP);
         viewHolder.img.setImageResource((galleryList.get(i).getImage_ID()));

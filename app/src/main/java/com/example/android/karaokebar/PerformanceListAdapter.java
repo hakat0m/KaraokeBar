@@ -17,15 +17,15 @@ import java.util.ArrayList;
  * It represents queue of songs displayed in tab 'Stage'
  */
 
-public class SongListAdapter extends ArrayAdapter<Song> {
+public class PerformanceListAdapter extends ArrayAdapter<Performance> {
 
     /**
      * @param context        The current context. Used to inflate the layout file.
-     * @param pSongArrayList A List of Songs objects to display in a list
+     * @param pPerformanceArrayList A List of Songs objects to display in a list
      **/
-    public SongListAdapter(Activity context, ArrayList<Song> pSongArrayList) {
+    public PerformanceListAdapter(Activity context, ArrayList<Performance> pPerformanceArrayList) {
 
-        super(context, 0, pSongArrayList);
+        super(context, 0, pPerformanceArrayList);
     }
 
     @Override
@@ -53,25 +53,25 @@ public class SongListAdapter extends ArrayAdapter<Song> {
                         R.layout.listitem_scene, parent, false);
             }
 
-            // Get the {@link Song} object located at this position in the list
-            Song currentSong = getItem(position);
+            // Get the {@link Performance} object located at this position in the list
+            Performance _currentPerformance = getItem(position);
 
             // Find the TextView in the listitem_scene.xml layout with the ID version_name
             ImageView photoImageView = (ImageView) listItemView.findViewById(R.id.list_item_scene_singer_photo);
-            // Get the version name from the current Song object and
+            // Get the version name from the current Performance object and
             // set this text on the name TextView
-            photoImageView.setImageResource(currentSong.getImageResourceId());
+            photoImageView.setImageResource(_currentPerformance.getImageResourceId());
             photoImageView.setVisibility(photoImageView.VISIBLE);
 
             TextView singerNameTextView = (TextView) listItemView.findViewById(R.id.list_item_scene_singer_name);
-            singerNameTextView.setText(currentSong.getSinger());
+            singerNameTextView.setText(_currentPerformance.getSinger());
 
             TextView artistTextView = (TextView) listItemView.findViewById(R.id.list_item_scene_artist_name);
-            String artistWithDash = currentSong.getArtist() + ' ' + getContext().getString(R.string.em_dash) + ' ';
+            String artistWithDash = _currentPerformance.getArtist() + ' ' + getContext().getString(R.string.em_dash) + ' ';
             artistTextView.setText(artistWithDash);
 
             TextView titleTextView = (TextView) listItemView.findViewById(R.id.list_item_scene_song_name);
-            titleTextView.setText(currentSong.getTitle());
+            titleTextView.setText(_currentPerformance.getTitle());
 
         }
 
