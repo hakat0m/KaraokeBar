@@ -1,6 +1,7 @@
 package com.example.android.karaokebar;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -94,7 +95,11 @@ public class OrderFragment extends Fragment {
                 .setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
                     @Override
                     public void onItemClicked(RecyclerView recyclerView, int position, View v) {
-                        Log.i("Order track","clicked");
+                        //Create new intent to open {@link TabbedActivity}
+                        Intent formIntend = new Intent(OrderFragment.super.getContext(), TrackOrderFormActivity.class);
+
+                        //Start the new activity
+                        startActivity(formIntend);
                     }
                 });
 
