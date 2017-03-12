@@ -95,10 +95,17 @@ public class OrderFragment extends Fragment {
                 .setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
                     @Override
                     public void onItemClicked(RecyclerView recyclerView, int position, View v) {
-                        //Create new intent to open {@link TabbedActivity}
+
+
+
+                        String orderedSong = "Frozen, Let it go";
+                        // Create new intent to open {@link TabbedActivity}
                         Intent formIntend = new Intent(OrderFragment.super.getContext(), TrackOrderFormActivity.class);
 
-                        //Start the new activity
+                        // Pass parameter to a new activity
+                        formIntend.putExtra("song", orderedSong);
+
+                        // Start the new activity
                         startActivity(formIntend);
                     }
                 });
