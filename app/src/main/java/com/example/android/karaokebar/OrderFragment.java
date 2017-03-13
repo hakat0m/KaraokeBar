@@ -96,9 +96,9 @@ public class OrderFragment extends Fragment {
                     @Override
                     public void onItemClicked(RecyclerView recyclerView, int position, View v) {
 
+                        // Get song title from the string array with song titles
+                        String orderedSong = image_titles[position];
 
-
-                        String orderedSong = "Frozen, Let it go";
                         // Create new intent to open {@link TabbedActivity}
                         Intent formIntend = new Intent(OrderFragment.super.getContext(), TrackOrderFormActivity.class);
 

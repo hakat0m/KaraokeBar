@@ -12,8 +12,11 @@ import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
+ *
  */
 public class SceneFragment extends Fragment {
+
+    public ArrayList<Performance> _performanceList;
 
 
     public SceneFragment() {
@@ -27,7 +30,7 @@ public class SceneFragment extends Fragment {
 
         //Create and populate list of song that will be displayed
         //in On scene tab.
-        ArrayList<Performance> _performanceList = new ArrayList<Performance>();
+        _performanceList = new ArrayList<Performance>();
 
         _performanceList.add(new Performance("Janet", "Rihanna", "\"This Is What You Came For\"", R.drawable.abby));
         _performanceList.add(new Performance("Mark", "Twenty one pilots", "\"Heathens\"", R.drawable.mark));

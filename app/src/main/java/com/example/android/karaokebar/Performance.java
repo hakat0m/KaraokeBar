@@ -2,6 +2,8 @@ package com.example.android.karaokebar;
 
 /**
  * Created by Aga on 3/2/2017.
+ *
+ * If you're gonna fail, fail HUGE...:)
  */
 
 public class Performance {
@@ -17,6 +19,7 @@ public class Performance {
 * @param pArtistName is name of singer
 * @param pTitle is the title of the performed song
 *
+* Don’t Facebook me, bro
 * */
 
     public Performance(String pSinger, String pArtist, String pTitle, int pImageResourceId) {

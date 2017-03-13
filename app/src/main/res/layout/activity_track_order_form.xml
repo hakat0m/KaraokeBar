@@ -34,9 +34,9 @@
 			android:textSize="36dp"/>
 
 		<TextView
+			android:id="@+id/song_name"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:text="This is what you came for - Rihanna"
 			android:textColor="@color/colorPrimaryLight"
 			android:gravity="center"
 			android:textSize="16dp"/>
@@ -54,7 +54,8 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:inputType="textPersonName"
-			android:text="Name"
+			android:hint="Name"
+			android:textColorHint="@color/background"
 			android:ems="10"
 			android:textColor="@color/background"
 			android:backgroundTint="@color/background"/>
@@ -67,7 +68,8 @@
 			android:layout_height="wrap_content"
 			android:inputType="textEmailAddress"
 			android:ems="10"
-			android:text="E-mail"
+			android:hint="E-mail"
+			android:textColorHint="@color/background"
 			android:textColor="@color/background"
 			android:backgroundTint="@color/background"/>
 
@@ -86,6 +88,7 @@
 
 
 	<Button
+		android:id="@+id/send_order_btn"
 		android:text="Send Order"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
