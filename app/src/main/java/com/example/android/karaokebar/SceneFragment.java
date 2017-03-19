@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import java.util.ArrayList;
 
+import static com.example.android.karaokebar.MainActivity._performanceList;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,7 +18,7 @@ import java.util.ArrayList;
  */
 public class SceneFragment extends Fragment {
 
-    public ArrayList<Performance> _performanceList;
+
 
 
     public SceneFragment() {
@@ -27,19 +29,6 @@ public class SceneFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        //Create and populate list of song that will be displayed
-        //in On scene tab.
-        _performanceList = new ArrayList<Performance>();
-
-        _performanceList.add(new Performance("Janet", "Rihanna", "\"This Is What You Came For\"", R.drawable.abby));
-        _performanceList.add(new Performance("Mark", "Twenty one pilots", "\"Heathens\"", R.drawable.mark));
-        _performanceList.add(new Performance("Annie", "The Chainsmokers feat. Halsey", "\"Closer\"", R.drawable.annie));
-        _performanceList.add(new Performance("Ken", "Rihanna", "\"Closer\"", R.drawable.ken));
-        _performanceList.add(new Performance("Abby", "Rihanna", "\"This Is What You Came For\"", R.drawable.abby));
-        _performanceList.add(new Performance("Mark", "Twenty one pilots", "\"Heathens\"", R.drawable.mark));
-        _performanceList.add(new Performance("Annie", "The Chainsmokers feat. Halsey", "\"Closer\"", R.drawable.annie));
-        _performanceList.add(new Performance("Ken", "Rihanna", "\"Closer\"", R.drawable.ken));
 
         View rootView = inflater.inflate(R.layout.fragment_scene, container, false);
 

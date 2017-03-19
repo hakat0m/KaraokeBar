@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class PerformanceListAdapter extends ArrayAdapter<Performance> {
 
     /**
-     * @param context        The current context. Used to inflate the layout file.
+     * @param context               The current context. Used to inflate the layout file.
      * @param pPerformanceArrayList A List of Songs objects to display in a list
      **/
     public PerformanceListAdapter(Activity context, ArrayList<Performance> pPerformanceArrayList) {
@@ -46,12 +46,15 @@ public class PerformanceListAdapter extends ArrayAdapter<Performance> {
                                 .setAction("Action", null).show();
                     }
                 });
+
             }
-        } else {
-            if (listItemView == null) {
-                listItemView = LayoutInflater.from(getContext()).inflate(
-                        R.layout.listitem_scene, parent, false);
-            }
+        }
+
+
+        if (listItemView == null) {
+            listItemView = LayoutInflater.from(getContext()).inflate(
+                    R.layout.listitem_scene, parent, false);
+
 
             // Get the {@link Performance} object located at this position in the list
             Performance _currentPerformance = getItem(position);
@@ -67,14 +70,13 @@ public class PerformanceListAdapter extends ArrayAdapter<Performance> {
             singerNameTextView.setText(_currentPerformance.getSinger());
 
             TextView artistTextView = (TextView) listItemView.findViewById(R.id.list_item_scene_artist_name);
-            String artistWithDash = _currentPerformance.getArtist() + ' ' + getContext().getString(R.string.em_dash) + ' ';
+            String artistWithDash =
+                    _currentPerformance.getArtist() + ' ' + getContext().getString(R.string.em_dash) + ' ';
             artistTextView.setText(artistWithDash);
 
             TextView titleTextView = (TextView) listItemView.findViewById(R.id.list_item_scene_song_name);
             titleTextView.setText(_currentPerformance.getTitle());
-
         }
-
 
 
         // Return the whole list item layout (containing 2 TextViews and an ImageView)

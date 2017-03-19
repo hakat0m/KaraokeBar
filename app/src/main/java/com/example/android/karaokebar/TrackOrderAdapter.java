@@ -46,7 +46,7 @@ public class TrackOrderAdapter extends RecyclerView.Adapter<TrackOrderAdapter.Vi
         public ViewHolder(View view) {
             super(view);
 
-            title = (TextView)view.findViewById(R.id.title);
+            title = (TextView) view.findViewById(R.id.title);
             img = (ImageView) view.findViewById(R.id.img);
         }
     }
